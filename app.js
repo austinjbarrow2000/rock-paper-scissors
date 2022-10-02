@@ -2,7 +2,7 @@ function getComputerChoice() {
     let computerResponses = ["rock", "paper", "scissors"];
     max = 2;
     min = 0;
-    choice = Math.floor( Math.random() * (max - min + 1) + 1);
+    choice = Math.floor( Math.random() * (max - min + 1) + min);
 
     return computerResponses[choice];
 }
@@ -27,12 +27,12 @@ function game() {
     console.log("This is a game of rock paper scissors! It is a best of 5 against a computer!")
     computerScore = 0;
     playerScore = 0;
-    while( computerScore < 3 || playerSelection < 3) {
+    while( computerScore < 3 & playerScore < 3) {
         playerSelection = prompt("What is your selection?")
         result = playRound(playerSelection)
         console.log(result);
         console.log(`The score is Player: ${playerScore} Computer: ${computerScore}`);
     }
 
-    computerScore = 3 ? "The computer wins!": "You win!";
+    console.log(computerScore == 3 ? "The computer wins!": "You win!");
 }
