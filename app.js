@@ -27,10 +27,12 @@ function game() {
     console.log("This is a game of rock paper scissors! It is a best of 5 against a computer!")
     computerScore = 0;
     playerScore = 0;
-    for( let i = 0; i < 5; i++ ) {
+    while( computerScore < 3 || playerSelection < 3) {
         playerSelection = prompt("What is your selection?")
         result = playRound(playerSelection)
         console.log(result);
         console.log(`The score is Player: ${playerScore} Computer: ${computerScore}`);
     }
+
+    computerScore = 3 ? "The computer wins!": "You win!";
 }
