@@ -1,7 +1,7 @@
 function getComputerChoice() {
     let computerResponses = ["rock", "paper", "scissors"];
-    max = 3;
-    min = 1;
+    max = 2;
+    min = 0;
     choice = Math.floor( Math.random() * (max - min + 1) + 1);
 
     return computerResponses[choice];
